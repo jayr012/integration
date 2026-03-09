@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #6c63ff;
+    --bg-color: #ffffff;
+    --text-color: #2d3436;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://i.pinimg.com/1200x/02/12/9c/02129c9f9ee35d9ddae567afd49d27b8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 20px; /* Space sa pagitan ng H1 at ng Widget */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Para mabasa kahit maliwanag ang background */
+    font-weight: 700;
+    text-align: center;
+}
+
+.widget-container {
+    width: 400px;
+    padding: 20px;
+    border-radius: 24px;
+    
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    border: 1px solid rgba(255, 255, 255, 10);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h3 {
+    color: #ffffff;
+}
+
+#date-display {
+    font-size: 0.8rem;
+    color: #ffffffd8;
+    font-weight: bold;
+}
+
+.image-frame {
+    width: 100%;
+    height: 300px;
+    background: #1a1a1a;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#daily-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+#daily-img.visible {
+    opacity: 0.7; /* Dimmed slightly so text pops */
+}
+
+/* The Detail Overlay */
+.text-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    text-align: left;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.text-content.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.text-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #dfe6e9;
+}
+
+#refresh-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+#refresh-btn:hover {
+    background-color: #5149e1;
+}
