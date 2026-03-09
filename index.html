@@ -1,0 +1,38 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily 7 Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Picture of the Day!</h1>
+
+    <div class="widget-container">
+        <div class="header">
+            <h3>Daily Inspiration</h3>
+            <span id="date-display"></span>
+        </div>
+        
+        <div class="image-frame">
+            <img id="daily-img" src="" alt="Daily Photo">
+            <div id="text-overlay" class="text-content">
+                <h4 id="photo-title">...</h4>
+                <p id="photo-desc">...</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="refresh-btn">Discover Next Photo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
